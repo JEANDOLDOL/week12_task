@@ -1,0 +1,268 @@
+* {
+  background-color: #f0f8ff;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.top_nav {
+  background-color: #f0f8ff; /* 배경 색상을 명시적 HEX 값으로 변경 */
+  display: flex;
+  align-items: center; /* right -> center로 수정 (align-items는 'right'가 아님) */
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed; /* 고정 위치 */
+  top: 0; /* 화면의 가장 위쪽에 고정 */
+  left: 0;
+  width: 100%; /* 전체 화면 너비 차지 */
+  z-index: 1000; /* 다른 요소보다 위에 보이도록 설정 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 살짝 그림자 효과 */
+}
+
+.loginDiv {
+  width: 50%; /* 너비 설정 */
+  background-color: white; /* 배경색 설정 (예시) */
+  padding: 20px; /* 내부 여백 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 (예시) */
+}
+
+.loginBody {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100vh; /* 뷰포트 전체 높이 사용 */
+  margin: 0; /* 기본 margin 제거 */
+}
+
+/* 버튼 컨테이너: 가로 정렬 */
+.button-container {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  gap: 20px; /* 버튼 사이 간격 */
+  margin-top: 20px; /* 상단 여백 */
+}
+
+/* 공통 버튼 스타일 */
+.btn {
+  padding: 10px 20px; /* 버튼 안쪽 여백 */
+  font-size: 16px; /* 글자 크기 */
+  border: none; /* 기본 테두리 제거 */
+  border-radius: 5px; /* 둥근 모서리 */
+  cursor: pointer; /* 마우스 커서 변경 */
+  transition: background-color 0.3s ease; /* 부드러운 배경색 전환 효과 */
+}
+
+/* submit 버튼 스타일 */
+.loginBody .loginDiv .button-container .btn.submit-btn {
+  background-color: #4caf50; /* 원하는 스타일 */
+  color: white; /* 글자 색 */
+  padding: 10px 20px; /* 여백 */
+  border-radius: 5px; /* 둥근 모서리 */
+  font-size: 16px;
+}
+
+.loginBody .loginDiv .button-container .submit-btn:hover {
+  background-color: #45a049; /* hover 시 더 어두운 녹색 */
+}
+
+/* signup 버튼 스타일 */
+.loginBody .loginDiv .button-container .signup-btn {
+  background-color: #008cba; /* 파란색 배경 */
+  color: white; /* 흰색 글자 */
+}
+
+.loginBody .loginDiv .button-container .signup-btn:hover {
+  background-color: #007bb5; /* hover 시 더 어두운 파란색 */
+}
+
+.flip_board {
+  width: 60%;
+  height: 50%;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  display: flex;
+  justify-content: center; /* Flexbox 사용 시 가로 중앙 정렬 */
+  align-items: center;
+}
+
+.buttons {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 게시물 작성 */
+/* 페이지 가운데 배치 및 스타일 */
+.post-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 화면 높이를 꽉 채움 */
+  background-color: #f0f8ff; /* 배경색 (선택 사항) */
+}
+
+/* 제목 입력창 스타일 */
+.post-title {
+  width: 85%; /* 화면 너비의 85% */
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 20px; /* 아래 여백 */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-textarea {
+  width: 85%; /* 화면 너비의 85% */
+  height: 400px; /* 텍스트 입력 창 높이 */
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: none; /* 크기 조정 못하게 */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* 버튼 그룹 스타일 */
+.button-group {
+  display: flex;
+  justify-content: center; /* 버튼을 중앙으로 정렬 */
+  margin-top: 20px;
+}
+
+.submit-btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* 웰컴창 */
+/* 전체 레이아웃을 가운데로 정렬 */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #f0f8ff;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.welcome-header {
+  margin-top: 50px;
+}
+
+.welcome-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #4caf50;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-animation {
+  margin: 50px 0;
+}
+
+.animated-image {
+  width: 500px; /* 이미지의 크기 조정 */
+  height: auto;
+  animation: slideIn 1s ease-in-out infinite alternate;
+}
+
+/* 네비게이션 링크 스타일 */
+.welcome-links {
+  display: flex;
+}
+
+.nav-link {
+  margin: 0 15px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #45a049;
+}
+
+/* 푸터 스타일 */
+.welcome-footer {
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* 애니메이션 효과 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
